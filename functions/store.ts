@@ -7,7 +7,7 @@ export default async (event : any, req: Request, context: Context) => {
   const data = await event.json(); 
   let myuuid = uuidv4();
   const submissions = getStore("submissions");
-  
+
   await submissions.setJSON(myuuid, data["body"]);
-  return Response.json({ id : myuuid})
+  return Response.json({ "id" : myuuid})
 }

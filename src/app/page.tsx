@@ -3,6 +3,7 @@
 import { useState } from "react";
 import GetBlob from "./components/getBlob";
 import StoreBlob from "./components/storeBlob";
+import GetAllBlobs from "./components/GetAllBlobs";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -44,6 +45,7 @@ export default function Home() {
           <h1>Get Blob Component</h1>
           <GetBlob />
         </div>
+        <GetAllBlobs />
       </div>
     </body>
   );

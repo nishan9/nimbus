@@ -16,7 +16,8 @@ function GetBlob() {
   };
 
   return (
-    <div>
+    <div className="text-center space-y-6">
+      <h1 className="text-2xl font-semibold">Get Blob</h1>
       <input
         type="text"
         value={id}

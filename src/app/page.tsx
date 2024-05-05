@@ -42,7 +42,6 @@ export default function Home() {
           <StoreBlob />
         </div>
         <div className="my-10">
-          <h1>Get Blob Component</h1>
           <GetBlob />
         </div>
         <GetAllBlobs />

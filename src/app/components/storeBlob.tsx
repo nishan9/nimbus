@@ -8,19 +8,12 @@ function StoreBlob() {
         "Content-type": "application/json",
       },
       body: JSON.stringify({ keyword: "menaiala" }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    }).then((response) => console.log(response.json()));
   };
 
   return (
     <div>
-      <button onClick={() => fetchData()}>Hi</button>
+      <button onClick={() => fetchData()}>Store Blob Button</button>
     </div>
   );
 }

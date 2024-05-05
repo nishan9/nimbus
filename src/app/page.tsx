@@ -8,10 +8,14 @@ export default function Home() {
   return (
     <div>
       <HelloWorld />
-      <h1>Get Blob</h1>
-      <GetBlob />
-      <h1>Store Blob</h1>
-      <StoreBlob />
+      <div className="my-10">
+        <h1>Get Blob Component</h1>
+        <GetBlob />
+      </div>
+      <div className="my-10">
+        <h1>Store Blob Component</h1>
+        <StoreBlob />
+      </div>
     </div>
   );
 }

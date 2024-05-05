@@ -3,11 +3,10 @@ import { getStore } from "@netlify/blobs";
 
 export default async (req: Request, context: Context) => {
 
+  const parts = req.url.split('/');
+  const id = parts[parts.length - 1];
+  const construction = getStore("submissions");
+  const entry1 = await construction.get(id, { type : "json" });
 
-
-  const construction = getStore("construction");
-  const entry1 = await construction.get("nails");
-
-
-  return Response.json({ message : entry1 })
+  return Response.json(entry1)
 }

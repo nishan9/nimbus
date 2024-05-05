@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import GetBlob from "./components/getBlob";
-import HelloWorld from "./components/helloWorld";
 import StoreBlob from "./components/storeBlob";
 
 export default function Home() {

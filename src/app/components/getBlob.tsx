@@ -11,11 +11,16 @@ function GetBlob() {
       },
     });
     const data = await response.json();
-    setResponse(data.message);
+    console.log(data);
   };
 
   return (
     <div>
+      <input
+        type="text"
+        placeholder="Submission ID"
+        className="input input-bordered w-full max-w-xs"
+      />
       <button onClick={() => fetchData()}>Get Blob Button</button>
       {response}
     </div>

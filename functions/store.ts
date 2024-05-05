@@ -1,11 +1,13 @@
 import type { Context } from "@netlify/functions"
 import { getStore } from "@netlify/blobs";
+import {v4 as uuidv4} from 'uuid';
 
 export default async (event : any, req: Request, context: Context) => {
 
-  const construction = getStore("construction");
-
-  await construction.setJSON("nails","va");
+  const data = await event.json(); 
+  let myuuid = uuidv4();
+  const submissions = getStore("submissions");
   
-  return Response.json({ message : "Hello, world!"})
+  await submissions.setJSON(myuuid, data["body"]);
+  return Response.json({ id : myuuid})
 }
